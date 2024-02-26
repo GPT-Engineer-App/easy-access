@@ -7,15 +7,9 @@ const Index = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleLogin = () => {
+  const handleLogin = async () => {
     if (username === "tendo" && password === "1234") {
-      toast({
-        title: "Login successful.",
-        description: "You've successfully logged in.",
-        status: "success",
-        duration: 5000,
-        isClosable: true,
-      });
+      window.location.href = "/main";
     } else {
       toast({
         title: "Invalid credentials.",
